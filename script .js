@@ -1,51 +1,48 @@
-// LOADING
+// =========================
+// LOADING + INTRO VIDEO
+// =========================
+
 window.addEventListener("load", function(){
 
     const intro = document.getElementById("intro");
     const video = document.getElementById("introVideo");
     const skip = document.getElementById("skipIntro");
 
+
     function masukWebsite(){
+
         if(intro){
             intro.style.display = "none";
         }
+
     }
+
 
     if(video){
+
         video.addEventListener("ended", masukWebsite);
+
     }
+
 
     if(skip){
+
         skip.addEventListener("click", masukWebsite);
+
     }
 
-    // cadangan otomatis 8 detik
+
+    // Cadangan jika video tidak mendeteksi selesai
     setTimeout(masukWebsite, 8000);
 
-});
 
 });
 
 
-// SKIP INTRO
-const skipBtn = document.getElementById("skipIntro");
-
-if(skipBtn){
-
-    skipBtn.onclick = () => {
-
-        const intro = document.getElementById("intro");
-
-        if(intro){
-            intro.style.display = "none";
-        }
-
-    };
-
-}
-
-
+// =========================
 // TYPING EFFECT
+// =========================
+
 if(document.getElementById("typing")){
 
 new Typed("#typing", {
@@ -66,10 +63,13 @@ loop:true
 }
 
 
+// =========================
 // MOBILE MENU
+// =========================
 
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
+
 
 if(menuBtn){
 
@@ -82,7 +82,9 @@ menuBtn.onclick = () => {
 }
 
 
+// =========================
 // MUSIC PLAYER
+// =========================
 
 const music = document.getElementById("bgmusic");
 const musicBtn = document.getElementById("musicBtn");
@@ -102,7 +104,7 @@ if(!playing){
     musicBtn.innerHTML =
     '<i class="fas fa-pause"></i>';
 
-    playing=true;
+    playing = true;
 
 }
 
@@ -113,18 +115,19 @@ else{
     musicBtn.innerHTML =
     '<i class="fas fa-play"></i>';
 
-    playing=false;
+    playing = false;
 
 }
 
 
 };
 
-
 }
 
 
+// =========================
 // ANIMASI SCROLL
+// =========================
 
 const cards = document.querySelectorAll(
 ".project-card, .about-card, .skill"
@@ -135,8 +138,7 @@ window.addEventListener("scroll",()=>{
 
 cards.forEach(card=>{
 
-let posisi =
-card.getBoundingClientRect().top;
+let posisi = card.getBoundingClientRect().top;
 
 
 if(posisi < window.innerHeight - 100){
