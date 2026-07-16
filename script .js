@@ -21,6 +21,12 @@ window.addEventListener("load", () => {
             }
         };
     }
+    
+    setTimeout(() => {
+    if(intro){
+        intro.style.display = "none";
+    }
+},8000);
 
 });
 
