@@ -9,11 +9,15 @@ window.addEventListener("load", function(){
 
     function masukWebsite(){
 
-        if(intro){
-            intro.style.display = "none";
-        }
+    const intro = document.getElementById("intro");
 
-        document.body.style.overflow = "auto";
+    if(intro){
+        intro.style.display = "none";
+        intro.style.visibility = "hidden";
+        intro.remove();
+    }
+
+
 
     }
 
