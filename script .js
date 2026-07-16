@@ -1,6 +1,4 @@
-// =========================
-// LOADING + INTRO VIDEO
-// =========================
+// INTRO VIDEO
 
 window.addEventListener("load", function(){
 
@@ -15,25 +13,34 @@ window.addEventListener("load", function(){
             intro.style.display = "none";
         }
 
+        document.body.style.overflow = "auto";
+
     }
 
 
+    // Video selesai
     if(video){
-
-        video.addEventListener("ended", masukWebsite);
-
+        video.onended = function(){
+            masukWebsite();
+        };
     }
 
 
+    // Tombol skip
     if(skip){
-
-        skip.addEventListener("click", masukWebsite);
-
+        skip.onclick = function(){
+            masukWebsite();
+        };
     }
 
 
-    // Cadangan jika video tidak mendeteksi selesai
-    setTimeout(masukWebsite, 8000);
+    // Cadangan otomatis sesuai durasi
+    setTimeout(function(){
+        masukWebsite();
+    },10000);
+
+
+});
 
 
 });
