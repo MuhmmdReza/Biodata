@@ -17,8 +17,6 @@ window.addEventListener("load", function(){
         intro.remove();
     }
 
-
-
     }
 
 
