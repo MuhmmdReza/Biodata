@@ -1,32 +1,28 @@
 // LOADING
-window.addEventListener("load", () => {
+window.addEventListener("load", function(){
 
-    const loader = document.getElementById("loader");
     const intro = document.getElementById("intro");
-
-    setTimeout(() => {
-        if(loader){
-            loader.style.display = "none";
-        }
-    },1000);
-
-
-    // Intro video
     const video = document.getElementById("introVideo");
+    const skip = document.getElementById("skipIntro");
+
+    function masukWebsite(){
+        if(intro){
+            intro.style.display = "none";
+        }
+    }
 
     if(video){
-        video.onended = () => {
-            if(intro){
-                intro.style.display = "none";
-            }
-        };
+        video.addEventListener("ended", masukWebsite);
     }
-    
-    setTimeout(() => {
-    if(intro){
-        intro.style.display = "none";
+
+    if(skip){
+        skip.addEventListener("click", masukWebsite);
     }
-},8000);
+
+    // cadangan otomatis 8 detik
+    setTimeout(masukWebsite, 8000);
+
+});
 
 });
 
