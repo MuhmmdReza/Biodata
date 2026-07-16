@@ -58,25 +58,15 @@ radial-gradient(circle at top,#15284d,#050816);
 #loader{
 
 position:fixed;
-
 top:0;
-
 left:0;
-
 width:100%;
-
 height:100%;
-
 background:#050816;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 flex-direction:column;
-
 z-index:9999;
 
 }
@@ -84,54 +74,42 @@ z-index:9999;
 .loader-logo{
 
 width:120px;
-
 height:120px;
-
 border-radius:50%;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 font-size:42px;
-
 font-weight:bold;
-
 background:#0d1328;
-
 border:4px solid #00d5ff;
-
 box-shadow:0 0 40px #00d5ff;
-
 animation:pulse 2s infinite;
 
 }
 
+
 @keyframes pulse{
 
 0%{
-
 transform:scale(1);
-
 }
 
 50%{
-
 transform:scale(1.1);
-
 }
 
 100%{
-
 transform:scale(1);
+}
 
 }
-   
+
+
 /* INTRO VIDEO */
 
 #intro{
+
 position:fixed;
 top:0;
 left:0;
@@ -142,15 +120,21 @@ display:flex;
 justify-content:center;
 align-items:center;
 z-index:10000;
+
 }
 
+
 #introVideo{
+
 width:100%;
 height:100%;
 object-fit:cover;
+
 }
 
+
 #skipIntro{
+
 position:absolute;
 bottom:40px;
 right:40px;
@@ -161,7 +145,6 @@ background:#00d5ff;
 color:#000;
 font-weight:bold;
 cursor:pointer;
-}
 
 }
 
