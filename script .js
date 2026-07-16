@@ -4,43 +4,27 @@
 
 window.addEventListener("load", function(){
 
-    const intro = document.getElementById("intro");
-    const video = document.getElementById("introVideo");
-    const skip = document.getElementById("skipIntro");
+const intro = document.getElementById("intro");
+const video = document.getElementById("introVideo");
+const skip = document.getElementById("skipIntro");
 
 
-    function masukWebsite(){
-
-        if(intro){
-
-            intro.style.opacity = "0";
-            intro.style.pointerEvents = "none";
-
-            setTimeout(function(){
-                intro.style.display = "none";
-            },500);
-
-        }
-
-    }
+function masukWebsite(){
+    intro.style.display = "none";
+}
 
 
-    if(video){
-
-        video.onended = function(){
-            masukWebsite();
-        };
-
-    }
+video.onended = function(){
+    masukWebsite();
+};
 
 
-    if(skip){
+skip.onclick = function(){
+    masukWebsite();
+};
 
-        skip.onclick = function(){
-            masukWebsite();
-        };
 
-    }
+});
 
 
     // cadangan
